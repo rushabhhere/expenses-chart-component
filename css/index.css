@@ -30,7 +30,7 @@ body {
 }
 
 main {
-  width: clamp(350px, 90%, 400px);
+  width: clamp(250px, 90%, 400px);
   margin: 1.5rem auto;
 }
 
@@ -146,4 +146,25 @@ main {
 }
 .last-month .text {
   color: var(--clr-medium-brown);
+}
+
+@media (max-width: 400px) {
+  .balance .text {
+    font-size: 0.8rem;
+  }
+  .balance .amount {
+    font-size: 1.75rem;
+  }
+  .spending h1 {
+    font-size: 1.5rem;
+  }
+  .this-month .text {
+    font-size: 0.8rem;
+  }
+  .this-month .amount {
+    font-size: 2rem;
+  }
+  .last-month {
+    font-size: 0.9rem;
+  }
 }

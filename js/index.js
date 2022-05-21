@@ -3,7 +3,7 @@ import data from '../resources/data.json';
 
 const days = document.querySelectorAll('.day');
 const bars = document.querySelectorAll('.day .bar');
-const amounts = document.querySelectorAll('.day #amount');
+const amounts = document.querySelectorAll('.day .amount');
 
 const date = new Date();
 const today = date.getDay() === 0 ? 6 : date.getDay() - 1;

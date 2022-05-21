@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./resources/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Expenses chart component</title>
+    <script type="module" src="/js/index.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="balance">
+        <div class="content">
+          <p class="text">My balance</p>
+          <p class="amount">$921.48</p>
+        </div>
+        <img src="./resources/images/logo.svg" alt="logo" />
+      </section>
+
+      <section class="spending">
+        <h1>Spending - Last 7 days</h1>
+
+        <!-- the chart -->
+        <div class="chart">
+          <div id="monday" class="day">
+            <div id="amount"></div>
+            <div class="bar"></div>
+            <div class="label">mon</div>
+          </div>
+          <div id="tuesday" class="day">
+            <div id="amount"></div>
+            <div class="bar"></div>
+            <div class="label">tue</div>
+          </div>
+          <div id="wednesday" class="day">
+            <div id="amount"></div>
+            <div class="bar"></div>
+            <div class="label">wed</div>
+          </div>
+          <div id="thursday" class="day">
+            <div id="amount"></div>
+            <div class="bar"></div>
+            <div class="label">thu</div>
+          </div>
+          <div id="friday" class="day">
+            <div id="amount"></div>
+            <div class="bar"></div>
+            <div class="label">fri</div>
+          </div>
+          <div id="saturday" class="day">
+            <div id="amount"></div>
+            <div class="bar"></div>
+            <div class="label">sat</div>
+          </div>
+          <div id="sunday" class="day">
+            <div id="amount"></div>
+            <div class="bar"></div>
+            <div class="label">sun</div>
+          </div>
+        </div>
+
+        <hr class="separator" />
+        <div class="totals">
+          <div class="this-month">
+            <p class="text">Total this month</p>
+            <p class="amount">$478.33</p>
+          </div>
+          <div class="last-month">
+            <p class="amount">+2.4%</p>
+            <p class="text">from last month</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

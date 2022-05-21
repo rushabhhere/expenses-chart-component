@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary colors */
+  --clr-soft-red: hsl(10, 79%, 65%);
+  --clr-cyan: hsl(186, 34%, 60%);
+
+  /* neutral colors */
+  --clr-dark-brown: hsl(25, 47%, 15%);
+  --clr-medium-brown: hsl(28, 10%, 53%);
+  --clr-cream: hsl(27, 66%, 92%);
+  --clr-pale-orange: hsl(33, 100%, 98%);
+
+  /* font */
+  --body-font: 'DM Sans', system-ui, sans-serif;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--clr-cream);
+
+  /* centering content */
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+main {
+  width: clamp(350px, 90%, 400px);
+  margin: 1.5rem auto;
+}
+
+.balance {
+  background-color: var(--clr-soft-red);
+  color: #ffffff;
+  border-radius: 0.5rem;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.25rem 1.5rem;
+
+  margin-bottom: 1rem;
+}
+.balance .text {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 0.2em;
+}
+.balance .amount {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.spending {
+  background-color: var(--clr-pale-orange);
+  padding: 1.5rem 1.25rem;
+  border-radius: 0.5rem;
+}
+.spending h1 {
+  font-size: 1.75rem;
+  color: var(--clr-dark-brown);
+}
+
+/* the chart */
+.chart {
+  height: 200px;
+  margin: 1.25rem 0;
+
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+.chart .day {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+}
+.chart #amount {
+  position: absolute;
+  top: -1.75rem;
+
+  background-color: var(--clr-dark-brown);
+  color: #ffffff;
+  padding: 0.5em;
+  border-radius: 5px;
+  opacity: 0;
+
+  font-size: 0.8rem;
+}
+.chart .day:hover > #amount {
+  opacity: 1;
+}
+.chart .bar {
+  width: 95%;
+  background-color: var(--clr-soft-red);
+  border-radius: 0.25rem;
+  margin: 0.5rem 0 0.75rem;
+}
+.day.today .bar {
+  background-color: var(--clr-cyan);
+}
+.chart .bar:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+.chart .label {
+  color: var(--clr-medium-brown);
+  font-size: 0.75rem;
+}
+
+.separator {
+  background-color: var(--clr-cream);
+  height: 3px;
+  border: none;
+  margin-bottom: 1.25rem;
+}
+.totals {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.this-month .text {
+  font-size: 1rem;
+  color: var(--clr-medium-brown);
+  margin-bottom: 0.5em;
+}
+.this-month .amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--clr-dark-brown);
+}
+.last-month {
+  text-align: right;
+  font-size: 1.1rem;
+}
+.last-month .amount {
+  font-weight: 700;
+  color: var(--clr-dark-brown);
+}
+.last-month .text {
+  color: var(--clr-medium-brown);
+}

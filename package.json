@@ -13,5 +13,9 @@
   },
   "main": "index.html",
   "repository": "https://github.com/rushabhhere/expenses-chart-component",
-  "author": "Rushabh Javeri"
+  "author": "Rushabh Javeri",
+  "dependencies": {
+    "d3-array": "^3.1.6",
+    "d3-scale": "^4.0.2"
+  }
 }

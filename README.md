@@ -40,6 +40,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- [d3-scale](https://github.com/d3/d3-scale) and [d3-array](https://github.com/d3/d3-array)
 - Vanilla JS
 - Mobile-first workflow
 - Vite
